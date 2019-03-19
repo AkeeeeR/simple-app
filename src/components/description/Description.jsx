@@ -5,14 +5,14 @@ import Shortcut from '../shortcut/Shortcut';
 import {
     BrowserRouter as Router,
     Route
-  } from 'react-router-dom';
+} from 'react-router-dom';
 
 const Description = () => {
     return (
-        <Router>
-            <Route exact path="/" component={Shortcut} />
-            <Route path="/content" component={Content} />
-        </Router>
+            <Router basename="/simple-react-app">
+                <Route exact path={'/'} component={Shortcut} />
+                <Route path={'/content'} component={Content} />
+            </Router>
     );
 }
 
